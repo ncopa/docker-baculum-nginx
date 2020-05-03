@@ -3,9 +3,10 @@ FROM alpine:edge
 # Install packages
 RUN apk --repository http://dl-master.alpinelinux.org/alpine/edge/testing \
 	add baculum-web nginx php7-fpm supervisor \
-	php7-dom
+	php7-dom bash curl
 
-RUN apk upgrade -U -a
+RUN apk upgrade -U -a \
+	&& echo "alias ll='ls -al' > /root/.bashrc"
 
 # Configure nginx
 COPY config/baculum-web-nginx.conf /etc/nginx/conf.d/baculum-web.conf
