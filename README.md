@@ -1,8 +1,8 @@
 # Baculum with nginx in Alpine linux
 
-### How to build?  
+### How to clone repository & build?  
 
-    git pull https://github.com/ncopa/docker-baculum-nginx.git
+    git clone https://github.com/ncopa/docker-baculum-nginx.git
     cd docker-baculum-nginx
     docker build -t baculum:3may.01
 
