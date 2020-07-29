@@ -12,6 +12,7 @@ RUN apk upgrade -U -a \
 # Configure nginx
 COPY config/baculum-web-nginx.conf /etc/nginx/conf.d/baculum-web.conf
 COPY config/00-nginx-logs.conf /etc/nginx/conf.d/00-nginx-logs.conf
+COPY user-preferences/basrc /root/.bashrc
 # Remove default server definition
 RUN rm /etc/nginx/conf.d/default.conf
 
