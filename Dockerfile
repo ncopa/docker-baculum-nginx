@@ -3,7 +3,8 @@ FROM alpine:edge
 # Install packages
 RUN apk --repository http://dl-master.alpinelinux.org/alpine/edge/testing \
 	add baculum-web nginx php7-fpm supervisor \
-	php7-dom bash curl
+	php7-dom bash curl \
+	&& ls -al
 
 RUN apk upgrade -U -a \
 	&& echo "alias ll='ls -al' > /root/.bashrc"
