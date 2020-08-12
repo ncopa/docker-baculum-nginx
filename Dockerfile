@@ -4,6 +4,7 @@ FROM alpine:edge
 RUN apk --repository http://dl-master.alpinelinux.org/alpine/edge/testing \
 	add baculum-web nginx php7-fpm supervisor \
 	php7-dom bash curl \
+	lighttpd baculum-api-lighttpd baculum-api \
 	&& ls -al
 
 RUN apk upgrade -U -a \
