@@ -1,1 +1,2 @@
 alias ll='ls -lart'
+export PS1="\[\033[32mDOCKER\033[0m\] \w $ "
