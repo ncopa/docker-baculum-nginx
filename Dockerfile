@@ -19,7 +19,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 # RUN install -d -o nginx -g nginx /run/nginx
 
-# set group permission of php-fpm to www-data
+# set group permission of php-fpm to lighttpd
 RUN sed -i -e 's/^group =.*/group = lighttpd/' /etc/php7/php-fpm.d/www.conf
 RUN chown -R lighttpd:lighttpd /usr/share/baculum/htdocs/
 
